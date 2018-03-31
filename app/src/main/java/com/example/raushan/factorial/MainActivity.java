@@ -32,8 +32,14 @@ public class MainActivity extends AppCompatActivity {
             {
                 int num = Integer.parseInt(number.getText().toString());
 
-                textView.setText(" " +factorial(num));
-                closeKeyboard();
+                double  result = factorial(num);
+                if (Double.toString(result).equals("Infinity")){
+                    textView.setText("result is out of range");
+                } else {
+                    textView.setText(" " + Double.toString(result));
+                    closeKeyboard();
+                }
+
             }
         });
 
