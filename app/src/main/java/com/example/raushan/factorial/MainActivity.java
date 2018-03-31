@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 int num = Integer.parseInt(number.getText().toString());
+
                 double  result = factorial(num);
                 if (Double.toString(result).equals("Infinity"))
                 {
@@ -41,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
                         textView.setText(" " + Double.toString(result));
                         closeKeyboard();
                     }
+
+
+
             }
         });
 
